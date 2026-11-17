@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-12",
+  "timezone": "Asia/Calcutta",
+  "unitTests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "workflowTests": {
+    "startTime": "2026-11-12T11:19:03.04Z",
+    "duration": 83029.995,
+    "expected": 20,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "name": "TC-01 registration, verification, blocked unverified login, duplicate email",
+      "status": "passed",
+      "durationMs": 3335
+    },
+    {
+      "name": "TC-02 successful login, logout, failed credentials create no session",
+      "status": "passed",
+      "durationMs": 3268
+    },
+    {
+      "name": "TC-03 save profile, add React, reject empty skills without mutation",
+      "status": "passed",
+      "durationMs": 287
+    },
+    {
+      "name": "TC-04 create Smart Attendance System, list it, reject missing skills",
+      "status": "passed",
+      "durationMs": 158
+    },
+    {
+      "name": "TC-05 faculty research creation, student discovery, blank title rejection",
+      "status": "passed",
+      "durationMs": 178
+    },
+    {
+      "name": "TC-06 exact candidate scoring, order, matched skills, no data changes",
+      "status": "passed",
+      "durationMs": 46
+    },
+    {
+      "name": "TC-07 Rust/Kotlin no match produces empty list, no records",
+      "status": "passed",
+      "durationMs": 50
+    },
+    {
+      "name": "TC-08 browse, search Smart, view details and skills, empty xyz123 search",
+      "status": "passed",
+      "durationMs": 138
+    },
+    {
+      "name": "TC-09 apply, persist Pending and notify creator; reject duplicates",
+      "status": "passed",
+      "durationMs": 87
+    },
+    {
+      "name": "TC-10 accept X, reject Y, membership integrity and persistent notices",
+      "status": "passed",
+      "durationMs": 1440
+    },
+    {
+      "name": "Campus posts persist, likes toggle, comments persist, ownership and moderation",
+      "status": "passed",
+      "durationMs": 629
+    },
+    {
+      "name": "Faculty announcements link to real opportunities and enforce permissions",
+      "status": "passed",
+      "durationMs": 249
+    },
+    {
+      "name": "Messaging privacy, unread state and notifications persist",
+      "status": "passed",
+      "durationMs": 256
+    },
+    {
+      "name": "Admin-only controls, same-origin protection, foreign key integrity",
+      "status": "passed",
+      "durationMs": 159
+    },
+    {
+      "name": "Team capacity remains correct under concurrent acceptance",
+      "status": "passed",
+      "durationMs": 1261
+    },
+    {
+      "name": "Responsive UI, keyboard labels, linked announcement navigation and refresh",
+      "status": "passed",
+      "durationMs": 10429
+    },
+    {
+      "name": "Public landing visual review, responsive layout and accessibility",
+      "status": "passed",
+      "durationMs": 3179
+    },
+    {
+      "name": "Student screens, working profile form, community composer, filters, accessibility",
+      "status": "passed",
+      "durationMs": 32569
+    },
+    {
+      "name": "Faculty dashboard, matching, no-match and research forms",
+      "status": "passed",
+      "durationMs": 15094
+    },
+    {
+      "name": "Admin and moderator screens enforce separate access",
+      "status": "passed",
+      "durationMs": 5940
+    }
+  ],
+  "productionSmoke": {
+    "dashboard": 200,
+    "landing": 200,
+    "registrationWithoutSMTP": 503,
+    "unauthenticatedPrivateFeed": 401,
+    "verificationTokenLeaked": false,
+    "login": 200
+  },
+  "databaseRestart": {
+    "posts": 4,
+    "messages": 1,
+    "retained": true,
+    "projects": 5,
+    "users": 9
+  },
+  "auditVulnerabilities": 0
+}

@@ -1,0 +1,2 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+const p='components/learning-hub.tsx';let s=readFileSync(p,'utf8');s=s.replace("const old=document.activeElement as HTMLElement;", "const old=document.activeElement as HTMLElement;const previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';");s=s.replace("document.removeEventListener('keydown',key);old?.focus();","document.removeEventListener('keydown',key);document.body.style.overflow=previousOverflow;old?.focus();");writeFileSync(p,s);

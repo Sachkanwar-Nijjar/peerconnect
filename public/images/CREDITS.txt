@@ -1,0 +1,22 @@
+PeerConnect campus photography
+
+1. thapar-night.jpg
+   "Thapar University Illuminated", 13 September 2011
+   Author: Ayush.undefined
+   Source: https://commons.wikimedia.org/wiki/File:Thapar_University_Illuminated.jpg
+   Original: https://upload.wikimedia.org/wikipedia/commons/b/b4/Thapar_University_Illuminated.jpg
+
+2. thapar-aerial.jpg
+   "Thapar Campus Aerial View", 13 September 2011
+   Author: Ayush.undefined
+   Source: https://commons.wikimedia.org/wiki/File:Thapar_Campus_Aerial_View.jpg
+   Original: https://upload.wikimedia.org/wikipedia/commons/2/29/Thapar_Campus_Aerial_View.jpg
+
+Both photographs are licensed CC BY-SA 3.0 Unported:
+https://creativecommons.org/licenses/by-sa/3.0/
+
+Original image files are retained without pixel edits. The interface uses CSS
+cropping, overlays and gradients for presentation. These photographs and any
+adapted photographic presentation remain available under CC BY-SA 3.0.
+Archive imagery is not a representation of present-day construction or events.
+No endorsement by the photographer or Thapar Institute is implied.

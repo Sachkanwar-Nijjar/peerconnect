@@ -1,0 +1,804 @@
+# PEERCONNECT — COMPLETE VISUAL TRANSFORMATION PROMPT
+## Transform a Generic University Dashboard into a Premium Gen-Z Campus Social Platform
+
+You are a world-class digital product designer, creative director, UI/UX specialist, and senior frontend engineer.
+
+Your task is to completely transform the visual identity and user experience of my existing web application, **PeerConnect**.
+
+PeerConnect is a university-exclusive platform for student collaboration, project discovery, skill-based teammate matching, research opportunities, campus discussions, messaging, and announcements.
+
+The application is already functional and has an established backend, database, and feature set.
+
+**Your task is NOT to build new features. Your task is to make the existing features look and feel dramatically better.**
+
+I have attached a screenshot of the current application. Study it carefully before making any changes.
+
+# 1. Why the current design needs to change
+
+The current design is technically clean, but visually generic.
+
+It resembles a conventional enterprise SaaS dashboard or university management portal.
+
+Specific issues visible in the screenshot:
+
+- Too much white and pale gray.
+- An oversized pastel-lavender promotional banner.
+- Excessive empty space above meaningful content.
+- Repetitive white cards with thin borders.
+- A sidebar that resembles standard admin software.
+- Weak visual hierarchy.
+- Very little contrast or visual excitement.
+- Important content buried below the fold.
+- No strong sense of campus culture or community.
+- A homepage dominated by statistics rather than interesting activity.
+- Limited personality in the illustrations, typography, and graphic elements.
+
+The interface is functional, but it doesn't make students curious about what's happening on campus.
+
+**I want a substantial creative redesign, not minor adjustments to colors, borders, or button styles.**
+
+Do not preserve the existing visual layout simply because it is already implemented.
+
+You have creative freedom to redesign the frontend while preserving the application's functionality.
+
+---
+
+# 2. New design direction
+
+Create a premium, visually distinctive, social-first experience for Gen-Z university students.
+
+The website should feel like a combination of:
+
+**Instagram**
+- Engaging content presentation
+- Beautiful profile layouts
+- Attractive visual hierarchy
+- Intuitive social interactions
+- Polished feed cards
+
+**Reddit**
+- Content-first homepage
+- Easy discovery of discussions
+- Clear categories
+- Community-driven atmosphere
+- Comfortable browsing
+
+**Discord**
+- Strong community identity
+- Beautiful dark surfaces
+- Youthful atmosphere
+- Clear navigation
+- Rich but organized interface
+
+**Linear**
+- Premium interface quality
+- Refined typography
+- Smooth animations
+- Excellent spacing
+- Sophisticated visual details
+
+**Spotify**
+- Rich dark surfaces
+- Expressive visual accents
+- Immersive content presentation
+- Distinctive card design
+
+Do not directly clone these platforms.
+
+Build a recognizable and original visual identity for PeerConnect.
+
+The desired result should feel:
+
+- Premium
+- Modern
+- Slightly futuristic
+- Social
+- Energetic
+- Sophisticated
+- Youthful
+- Immersive
+- Visually memorable
+
+Think of a polished consumer social application, not enterprise software.
+
+---
+
+# 3. Completely replace the current color system
+
+The existing white-and-lavender theme feels too soft and corporate.
+
+Move toward a darker, richer, more immersive visual system.
+
+## Recommended theme: Midnight Social
+
+Use a carefully balanced dark palette.
+
+Suggested design tokens:
+
+Main background: `#0B0D14`
+
+Sidebar background: `#10131D`
+
+Card background: `#171B29`
+
+Elevated surfaces: `#202538`
+
+Primary text: `#F5F6FC`
+
+Secondary text: `#A0A7BC`
+
+Subtle borders: `#2A3042`
+
+Primary accent: `#8B5CF6`
+
+Secondary accent: `#6366F1`
+
+Highlight accent: `#22D3EE`
+
+Optional warm accent: `#FB7185`
+
+Use these as a starting point, not as a rigid restriction.
+
+Experiment with subtle variations to create a coherent premium identity.
+
+### Color philosophy
+
+The interface should be dark, but not completely black.
+
+Use layers of charcoal, midnight blue, and deep indigo to create depth.
+
+Use violet, electric blue, and cyan selectively for emphasis.
+
+Use subtle gradients where they add genuine visual value.
+
+Do not make every card glow.
+
+Do not use excessive neon.
+
+Do not create a gaming dashboard.
+
+The result should feel closer to a luxury digital product than a flashy gaming website.
+
+Dark mode should be the primary visual direction.
+
+If a light theme already exists, preserve its functionality and update its design coherently.
+
+---
+
+# 4. Completely redesign the homepage
+
+This is the highest-priority task.
+
+The current homepage begins with a large generic greeting and promotional banner.
+
+Replace this with an immersive, content-first campus experience.
+
+**The homepage should feel alive immediately after login.**
+
+Students should be able to open PeerConnect and instantly discover:
+
+- What's happening on campus
+- Recent community discussions
+- Faculty announcements
+- Interesting projects
+- Relevant opportunities
+- Their application statuses
+- Their teams
+- Recent notifications
+
+All of these are already part of the existing application.
+
+Do not create new backend features.
+
+## Desktop layout
+
+Create a modern social application layout with three main areas.
+
+### Left: Premium navigation
+
+Redesign the sidebar.
+
+Use:
+- Dark background
+- Refined PeerConnect logo treatment
+- Beautiful active navigation indicators
+- Consistent icons
+- Better spacing
+- Smooth hover states
+- Compact user profile area
+
+The sidebar should feel closer to a modern consumer application than an administrative dashboard.
+
+Avoid excessive labels and separators.
+
+Use tasteful visual hierarchy.
+
+### Center: The main campus experience
+
+This should occupy the most attention.
+
+At the top, use a compact, visually interesting welcome area.
+
+Example:
+
+"Your campus. Your people. Your next big thing."
+
+Keep this introduction compact.
+
+Do not use another enormous decorative banner.
+
+Below it, prominently display the existing Campus Community feed.
+
+Include:
+- Quick post composer
+- Existing post categories
+- Community discussions
+- Faculty announcements
+- Project collaboration posts
+- Academic questions
+- Society/event announcements
+
+Create beautiful social cards with clear typography, avatars, category labels, and existing interaction controls.
+
+The feed should feel like the central attraction of the homepage.
+
+### Right: Personalized discovery
+
+Create an attractive discovery sidebar containing existing information:
+
+- Recommended projects
+- Relevant skill matches
+- Pending applications
+- Team memberships
+- Important announcements
+- Recent notifications
+
+Use visually distinctive compact cards.
+
+Make each card actionable through existing navigation or functionality.
+
+Avoid displaying everything as repetitive numerical statistics.
+
+### Important
+
+The homepage must not feel empty when a student has no applications or projects.
+
+Use existing campus posts, recommendations, and meaningful empty states to create a welcoming experience.
+
+Do not fabricate activity or statistics.
+
+---
+
+# 5. Replace the boring hero banner with strong visual storytelling
+
+The current lavender banner takes up too much space without offering much useful information.
+
+Remove it or fundamentally redesign it.
+
+If you use a hero section, make it:
+
+- Compact
+- Visually striking
+- Relevant to the student
+- Personalized
+- Actionable
+
+Use original graphic compositions such as:
+
+- Layered abstract geometric shapes
+- Interconnected nodes
+- Orbital patterns
+- Soft gradient lighting
+- Subtle mesh textures
+- Floating project cards
+- Stylized collaboration illustrations
+
+The visual concept should communicate:
+
+**Connection + Community + Collaboration + Creativity**
+
+Do not use generic stock illustrations of people working at laptops.
+
+Do not fill the page with meaningless decoration.
+
+Every graphic should support the product's identity.
+
+Use CSS, SVG, or appropriate local assets for polished visual elements.
+
+Optimize all assets for performance.
+
+---
+
+# 6. Create a distinctive PeerConnect brand identity
+
+The current logo and interface are recognizable but lack a strong visual personality.
+
+Preserve the official name:
+
+**PeerConnect**
+
+Tagline:
+
+**Connect. Collaborate. Create.**
+
+Explore a more refined visual treatment for the existing brand.
+
+Possible graphic directions:
+
+- Interconnected nodes
+- Abstract network symbols
+- Interlocking shapes
+- Orbit-inspired geometry
+- Dynamic connection lines
+
+Use the brand motif consistently in:
+
+- Navigation
+- Welcome sections
+- Empty states
+- Project cards
+- Loading indicators
+- Decorative backgrounds
+
+Avoid changing the product name.
+
+Do not introduce version numbers.
+
+Keep the brand identity recognizable and cohesive.
+
+---
+
+# 7. Make the campus feed visually addictive to browse
+
+The Campus Community feed should be the most engaging part of PeerConnect.
+
+Use the existing functionality:
+
+- Posts
+- Likes
+- Comments
+- Categories
+- Announcements
+- Linked projects
+- Existing optional images, if supported
+
+Redesign the post cards to feel more like a modern social application.
+
+### Post card anatomy
+
+Each card should have:
+
+- Beautiful avatar
+- Clear author name
+- Student/faculty label
+- Relative timestamp
+- Attractive category badge
+- Well-formatted post content
+- Image presentation if available
+- Existing like and comment controls
+- Existing linked project preview where relevant
+
+Use generous spacing within content cards, but keep the overall feed dense enough to feel active.
+
+### Interaction design
+
+Make existing interactions feel responsive:
+
+- Smooth like animations
+- Subtle button press effects
+- Elegant comment expansion
+- Beautiful composer transitions
+- Loading feedback
+- Success feedback
+- Clear hover states
+
+Do not implement new social features.
+
+No stories, reels, follows, saved posts, or additional reaction systems.
+
+The goal is to improve the existing social experience.
+
+---
+
+# 8. Make project discovery look exciting
+
+The current project discovery experience should be transformed into a visually appealing opportunity marketplace.
+
+This refers to visual presentation only, not a new marketplace feature.
+
+Project cards should feel like something students want to explore.
+
+Use:
+- Strong project titles
+- Distinctive category labels
+- Attractive skill badges
+- Match percentage indicators
+- Creator avatars
+- Better information hierarchy
+- Beautiful call-to-action buttons
+
+Experiment with different card sizes and layouts.
+
+Avoid repetitive white rectangles.
+
+Use visual hierarchy to highlight the most relevant opportunities.
+
+### Skill matching
+
+This is one of PeerConnect's signature features.
+
+Make matching percentages feel visually impressive.
+
+Use:
+- Circular indicators
+- Elegant progress bars
+- Subtle animations
+- Matched skill chips
+- Clear missing skill indicators
+
+Preserve the exact existing matching algorithm.
+
+Do not change the scoring logic.
+
+---
+
+# 9. Make profiles feel like social identities
+
+Redesign student and faculty profiles.
+
+They should feel like genuine personal identities within a university community.
+
+Use:
+- Beautiful profile headers
+- Larger avatars
+- Strong typography
+- Carefully organized information
+- Elegant skill chips
+- Project participation cards
+- Existing professional links
+
+A profile should be enjoyable to browse.
+
+Avoid making it resemble a database form.
+
+Do not introduce followers, social rankings, endorsements, or new profile features.
+
+---
+
+# 10. Redesign messages, teams, applications, and notifications
+
+Every existing section should inherit the new design language.
+
+### Messaging
+
+Make it feel like a polished modern messenger.
+
+Use dark chat surfaces, refined message bubbles, excellent spacing, and smooth transitions.
+
+### Applications
+
+Replace plain tables with attractive status cards where appropriate.
+
+Make pending, accepted, and rejected states immediately recognizable.
+
+### Teams
+
+Use beautiful member cards, avatars, and clear project associations.
+
+### Notifications
+
+Use compact, attractive notification items with strong visual hierarchy.
+
+The entire application should feel like one premium product, not separate unrelated pages.
+
+---
+
+# 11. Introduce more interesting graphics and shapes
+
+The current interface is visually flat.
+
+Add depth and personality using original visual elements.
+
+Explore:
+
+- Gradient orbs
+- Subtle grain textures
+- Abstract connection networks
+- Soft radial glows
+- Overlapping geometric shapes
+- Decorative line patterns
+- Layered panels
+- Subtle glass effects
+- Modern abstract illustrations
+
+Use these selectively.
+
+Examples:
+
+A project recommendation section could feature a subtle network graphic.
+
+A profile header could feature a unique abstract gradient composition.
+
+An empty state could use a small illustrated network motif.
+
+A faculty announcement could have a distinctive editorial layout.
+
+Avoid excessive blur, animation, or GPU-heavy effects.
+
+The final interface must remain fast and readable.
+
+---
+
+# 12. Typography and visual hierarchy
+
+Typography should contribute significantly to the premium feel.
+
+Use a modern font such as:
+
+- Geist
+- Inter
+- Plus Jakarta Sans
+
+Consider using a distinctive display typeface for selected headings while keeping body text highly readable.
+
+Create strong hierarchy through:
+- Size
+- Weight
+- Spacing
+- Contrast
+- Alignment
+
+Avoid oversized generic dashboard greetings.
+
+Use more editorial and visually engaging compositions.
+
+Keep content readable.
+
+---
+
+# 13. Microinteractions and motion design
+
+Introduce tasteful motion throughout the interface.
+
+Examples:
+
+- Smooth sidebar transitions
+- Hover elevation on project cards
+- Animated navigation indicators
+- Subtle feed card transitions
+- Responsive button feedback
+- Elegant modal animations
+- Smooth notification dropdowns
+- Animated matching indicators
+- Loading skeletons
+- Refined page transitions
+
+Use CSS transitions or an appropriate lightweight animation solution.
+
+Target smooth performance.
+
+Respect reduced-motion preferences.
+
+Do not use animations that delay user actions.
+
+---
+
+# 14. Improve information density
+
+The screenshot shows too much space devoted to decorative sections and too little to actual content.
+
+Fix this.
+
+The first viewport should display meaningful information.
+
+A student should not need to scroll past an enormous hero banner and several statistic cards to find the Campus Community.
+
+Prioritize:
+
+1. Community activity
+2. Relevant opportunities
+3. Personal project and application updates
+4. Useful navigation
+
+Use compact widgets for secondary information.
+
+Do not hide important functionality.
+
+---
+
+# 15. Make the mobile experience excellent
+
+PeerConnect should feel like a premium mobile social application.
+
+Use:
+- Mobile-friendly navigation
+- Comfortable content width
+- Beautiful single-column feed
+- Touch-friendly interactions
+- Responsive cards
+- Compact headers
+- Proper spacing
+- Smooth scrolling
+
+Ensure the design works across desktop, tablet, and mobile.
+
+Do not simply shrink the desktop dashboard.
+
+Design mobile layouts intentionally.
+
+---
+
+# 16. Maintain functional integrity
+
+This is a visual and interaction redesign only.
+
+Do not:
+
+- Add new product features
+- Remove existing functionality
+- Change authentication
+- Change user roles
+- Change database relationships
+- Change skill matching calculations
+- Change project application rules
+- Change team formation rules
+- Introduce new social systems
+- Break existing tests
+
+Reuse existing data, APIs, components, and business logic wherever possible.
+
+Refactor frontend components if needed.
+
+Do not rewrite working backend systems unnecessarily.
+
+---
+
+# 17. Implementation instructions
+
+Follow this process.
+
+### Phase 1 — Audit
+
+Inspect the existing codebase and attached screenshot.
+
+Identify:
+- Existing design tokens
+- Layout components
+- Navigation structure
+- Reusable UI components
+- Current homepage implementation
+- Existing feed components
+- Existing project and profile components
+
+Explain the main visual problems.
+
+### Phase 2 — Design system
+
+Create a cohesive premium dark design system.
+
+Define:
+- Color tokens
+- Typography
+- Spacing
+- Borders
+- Shadows
+- Radius scale
+- Motion rules
+- Component states
+
+### Phase 3 — Homepage redesign
+
+Redesign the authenticated homepage first.
+
+Make it visually striking and content-first.
+
+Ensure existing functionality remains connected.
+
+### Phase 4 — Shared components
+
+Update:
+- Sidebar
+- Header
+- Cards
+- Buttons
+- Forms
+- Modals
+- Tabs
+- Badges
+- Dropdowns
+- Empty states
+- Loading states
+
+### Phase 5 — Other pages
+
+Apply the design system to:
+- Campus Community
+- Project Discovery
+- Project Details
+- Skill Matching
+- Profiles
+- Messaging
+- Applications
+- Teams
+- Notifications
+- Faculty pages
+- Admin pages
+
+### Phase 6 — Visual quality assurance
+
+Run the application.
+
+Inspect it in a browser at desktop and mobile sizes.
+
+Take screenshots where supported.
+
+Compare the redesigned application with the original screenshot.
+
+Ask:
+
+- Does this still look like a generic university dashboard?
+- Is the homepage immediately interesting?
+- Does the dark palette feel premium?
+- Are the graphics distinctive?
+- Is the content easy to browse?
+- Is the interface visually consistent?
+- Would a student enjoy using this?
+- Does every existing feature still work?
+
+If the redesign still resembles the original dashboard with different colors, continue improving it.
+
+### Phase 7 — Regression testing
+
+Run the existing tests.
+
+Verify:
+- Authentication
+- Navigation
+- Project discovery
+- Matching
+- Applications
+- Teams
+- Community interactions
+- Messaging
+- Notifications
+
+Fix regressions before finishing.
+
+---
+
+# 18. Definition of success
+
+The redesign is successful when:
+
+- PeerConnect no longer looks like a generic SaaS dashboard.
+- The homepage feels like an active campus social platform.
+- The visual identity is distinctive and memorable.
+- Dark colors create a premium atmosphere.
+- Graphics and shapes add personality.
+- Existing posts and opportunities are engaging to browse.
+- The first viewport contains meaningful content.
+- Animations feel smooth and intentional.
+- The interface looks excellent on desktop and mobile.
+- All existing functionality remains intact.
+
+# FINAL INSTRUCTION
+
+I do not want minor cosmetic improvements.
+
+I want a **bold, cohesive, premium visual transformation** of PeerConnect.
+
+Take creative inspiration from Instagram, Reddit, Discord, Spotify, and Linear.
+
+Make the interface darker, richer, more immersive, and more visually exciting for Gen-Z students.
+
+Use beautiful graphics, original shapes, refined typography, thoughtful colors, and polished interactions.
+
+**Do not add a single feature from the larger PeerConnect vision.**
+
+Work entirely within the existing product scope.
+
+The result should feel like a real, high-quality campus social platform that students would be excited to use—not a conventional university assignment.
+
+Implement the redesign directly in the existing codebase, run it, visually inspect the results, test existing functionality, and refine the design until the transformation is substantial.
+
+**Start by redesigning the homepage and establishing the new visual identity.**

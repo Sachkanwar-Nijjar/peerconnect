@@ -1,0 +1,31 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import 'dotenv/config';
+import assert from 'node:assert/strict';
+process.env.DATABASE_URL=process.env.DATABASE_URL!.replace('/peerconnect?','/peerconnect_upgrade_qa_20261115?').replace(/\/peerconnect$/,'/peerconnect_upgrade_qa_20261115');
+const {db}=await import('../lib/db');
+const {learningData:get,learningMutate:act}=await import('../lib/learning');
+const a=await db.user.findUniqueOrThrow({where:{email:'student.a@thapar.edu'}}),b=await db.user.findUniqueOrThrow({where:{email:'student.b@thapar.edu'}}),c=await db.user.findUniqueOrThrow({where:{email:'student.c@thapar.edu'}});
+if(!process.env.DATABASE_URL!.includes('/peerconnect_upgrade_qa_20261115'))throw Error('QA database required');
+await db.guidanceRequest.deleteMany({where:{senderId:{in:[a.id,c.id]}}});
+let passed=0;async function check(label:string,fn:()=>Promise<void>){await fn();passed++;console.log('PASS',label);}
+await check('official catalog searchable',async()=>{const d=await get(a,new URLSearchParams({view:'courses',q:'UCS301'})) as any;assert.equal(d.total,1);});
+await check('self request rejected',async()=>{await assert.rejects(()=>act(a,{action:'request',recipientId:a.id,topic:'Skill guidance',skill:'python',question:'Please help me understand generators.'}));});
+await check('unavailable helper rejected',async()=>{await assert.rejects(()=>act(a,{action:'request',recipientId:b.id,topic:'Skill guidance',skill:'not offered',question:'Please help me understand generators.'}));});
+await act(b,{action:'offer',skill:'Python',category:'Technical',level:'Advanced',available:true});
+await act(b,{action:'course',code:'UCS301',status:'TAKEN',available:true});
+const r=await act(a,{action:'request',recipientId:b.id,topic:'Skill guidance',skill:'python',question:'Please help me understand Python generators.'}) as any;
+await check('duplicate active request rejected',async()=>{await assert.rejects(()=>act(a,{action:'request',recipientId:b.id,topic:'Skill guidance',skill:'python',question:'Please help me understand Python generators.'}));});
+await check('pending chat is gated',async()=>{await assert.rejects(()=>act(a,{action:'message',id:r.id,content:'Hello'}));});
+await check('third party cannot read request',async()=>{await assert.rejects(()=>get(c,new URLSearchParams({view:'thread',id:r.id})));});
+await check('sender cannot accept own request',async()=>{await assert.rejects(()=>act(a,{action:'status',id:r.id,status:'ACCEPTED'}));});
+await check('recipient can accept',async()=>{const x=await act(b,{action:'status',id:r.id,status:'ACCEPTED'}) as any;assert.equal(x.status,'ACCEPTED');});
+await check('accepted chat persists',async()=>{await act(b,{action:'message',id:r.id,content:'A generator yields values lazily.'});const x=await get(a,new URLSearchParams({view:'thread',id:r.id})) as any;assert.equal(x.messages.length,1);});
+await check('early feedback rejected',async()=>{await assert.rejects(()=>act(a,{action:'review',id:r.id,rating:5}));});
+await check('completion freezes conversation',async()=>{await act(a,{action:'status',id:r.id,status:'COMPLETED'});await assert.rejects(()=>act(b,{action:'message',id:r.id,content:'late'}));});
+await check('third party cannot review',async()=>{await assert.rejects(()=>act(c,{action:'review',id:r.id,rating:5}));});
+await check('eligible single feedback and aggregate',async()=>{await act(a,{action:'review',id:r.id,rating:5});await assert.rejects(()=>act(a,{action:'review',id:r.id,rating:1}));const x=await get(a,new URLSearchParams({view:'reputation',id:b.id})) as any;assert.equal(x.rating,5);assert.equal(x.count,1);});
+await check('course contribution requires taken declaration',async()=>{await assert.rejects(()=>act(a,{action:'experience',code:'UCS301',workload:4,cohort:'2024 batch',advice:''}));});
+await check('small sample workload withheld',async()=>{await act(b,{action:'experience',code:'UCS301',workload:4,cohort:'2024 batch',advice:''});const x=await get(a,new URLSearchParams({view:'course',code:'UCS301'})) as any;assert.equal(x.experience.workload,null);});
+await check('concurrent acceptance allows only one transition',async()=>{const req=await act(c,{action:'request',recipientId:b.id,topic:'Course preparation',courseCode:'UCS301',question:'How do I approach linked lists and trees?'}) as any;const results=await Promise.allSettled([act(b,{action:'status',id:req.id,status:'ACCEPTED'}),act(b,{action:'status',id:req.id,status:'DECLINED'})]);assert.equal(results.filter(x=>x.status==='fulfilled').length,1);});
+console.log(`${passed} learning integration checks passed in isolated QA database.`);
+await db.$disconnect();

@@ -1,0 +1,28 @@
+{
+  "full_suite": {
+    "startTime": "2026-11-12T15:23:38.022Z",
+    "duration": 62378.3,
+    "expected": 21,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "visual_recheck": {
+    "startTime": "2026-11-12T15:25:29.988Z",
+    "duration": 53990.756,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "final_landing_recheck": {
+    "startTime": "2026-11-12T15:27:09.645Z",
+    "duration": 7291.4259999999995,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "unit_tests_passed": 9,
+  "backend_baseline_unchanged": true
+}

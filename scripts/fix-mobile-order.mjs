@@ -1,0 +1,2 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+const p='components/campus-life.tsx';let s=readFileSync(p,'utf8');const start=s.indexOf('      <div className="campus-equal-grid">');const end=s.indexOf('\n      </div>',start)+19;if(start<0||end<start)throw Error('Shortcut section not found');const section=s.slice(start,end);s=s.slice(0,start)+s.slice(end);const marker='      <section id="campus-schedule"';if(!s.includes(marker))throw Error('Schedule anchor not found');s=s.replace(marker,section+'\n'+marker);writeFileSync(p,s);

@@ -1,0 +1,1114 @@
+# PEERCONNECT — FINAL CODEX MASTER PROMPT
+## Skill-Based Student Collaboration & Campus Community Platform
+### UCS503 Software Engineering Lab | Thapar Institute of Engineering and Technology
+
+You are a senior full-stack software engineer, software architect, database designer, expert UI/UX designer, and quality assurance engineer.
+
+Your task is to build **PeerConnect**, a complete, beautiful, functional full-stack web application for my university Software Engineering Lab submission.
+
+This must be a real application, not a static prototype, frontend-only demonstration, or collection of mock screens.
+
+Your objective is to deliver an academically sound, visually exceptional, and fully demonstrable software engineering project.
+
+## 1. Understand the project first
+
+I have attached two important documents:
+
+1. `PeerConnect_mst_file.pdf` — the original project report, SRS, requirements, use cases, diagrams, and user stories.
+2. `Test Cases (Template Format).docx` — the original ten test cases.
+
+**Read both documents completely before writing code.**
+
+The original project is a skill-based collaboration platform where students and faculty can create projects, discover suitable collaborators, apply to opportunities, communicate, and form teams.
+
+PeerConnect also includes a focused **Campus Community** experience, allowing students and faculty to share updates, academic questions, society announcements, and project opportunities.
+
+The project is NOT intended to become a full Instagram/Facebook clone for this academic submission.
+
+The original collaboration functionality remains the central academic objective.
+
+### Requirements hierarchy
+
+1. Preserve all original functional requirements FR-01 through FR-25.
+2. Preserve original business rules and user stories.
+3. Preserve expected behavior of test cases TC-01 through TC-10.
+4. Add the approved Campus Community extensions described below.
+5. Document any conflicts or assumptions instead of silently changing the original SRS.
+
+Create a requirements traceability matrix that distinguishes original requirements from newly added extensions.
+
+---
+
+# 2. Product identity
+
+**Product name:** PeerConnect
+
+**Full project title:** PeerConnect — Skill-Based Student Collaboration & Campus Community Platform
+
+**Tagline:** Connect. Collaborate. Create.
+
+**Positioning:** A private university platform that helps Thapar students and faculty discover projects, find suitable teammates, communicate, and stay connected with campus opportunities.
+
+The product should combine the professional usefulness of LinkedIn with the approachable social experience of a modern campus community.
+
+The website should feel premium, modern, youthful, and enjoyable to use.
+
+It must not look like a generic college management portal.
+
+**Branding rule:** Use the name "PeerConnect" consistently across the application, landing page, navigation, metadata, README, documentation, and presentation materials. Do not append version numbers such as 1.5 or 2.0 to the product name.
+
+---
+
+# 3. Technology stack
+
+Use:
+
+**Frontend**
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Lucide icons
+- React Hook Form
+- Zod
+
+**Backend**
+- Next.js server-side services and API route handlers
+- TypeScript
+- Secure authentication and authorization
+- Server-side validation
+
+**Database**
+- PostgreSQL
+- Prisma ORM
+- Database migrations
+- Seed scripts
+
+**Testing**
+- Vitest for unit and integration tests
+- Playwright for important end-to-end workflows
+- TypeScript type checking
+- ESLint
+
+Use stable compatible dependencies.
+
+Prefer a straightforward modular monolith over unnecessary microservices.
+
+Keep the project easy to install, run, demonstrate, and explain.
+
+---
+
+# 4. UI/UX — extremely important
+
+I want an exceptionally clean, aesthetic, professional, and modern interface.
+
+Take inspiration from the design quality and usability of LinkedIn, Instagram, Linear, Notion, and modern SaaS products, without copying their exact interfaces.
+
+## Visual direction
+
+- Deep navy and refined indigo as primary brand colors
+- White and subtle gray surfaces
+- Tasteful violet accents
+- Excellent typography using Geist or Inter
+- Rounded cards with consistent spacing
+- Beautiful profile cards and avatars
+- Subtle shadows and hover effects
+- Smooth but restrained animations
+- Clear icons
+- Elegant progress indicators
+- Polished empty states and loading skeletons
+
+Avoid:
+- Overloaded dashboards
+- Excessive gradients
+- Random decorative elements
+- Inconsistent layouts
+- Generic Bootstrap-looking components
+- Fake buttons
+- Unnecessary complexity
+
+Implement both light and dark mode if this does not compromise core functionality.
+
+## Responsiveness
+
+The entire application must work on desktop, tablet, and mobile.
+
+Desktop:
+- Left sidebar navigation
+- Main content area
+- Contextual right sidebar where useful
+
+Mobile:
+- Collapsible navigation or bottom navigation
+- Responsive cards
+- Touch-friendly controls
+
+Make the final application feel like one cohesive product.
+
+---
+
+# 5. Public landing page
+
+Create a premium landing page.
+
+**Hero headline:** Find your people. Build something great.
+
+**Supporting text:** Connect with talented students, discover exciting projects, and explore opportunities across the Thapar community.
+
+Primary CTA: Get Started
+
+Secondary CTA: Explore Features
+
+Include:
+- Beautiful hero section
+- Application interface preview
+- How PeerConnect works
+- Skill matching explanation
+- Projects and research opportunities
+- Campus community preview
+- Student/faculty benefits
+- Final registration CTA
+
+Use real application UI components for previews where possible.
+
+Do not use misleading statistics or invented university endorsements.
+
+---
+
+# 6. Authentication and university verification
+
+Implement:
+- Student registration
+- Faculty registration
+- Login
+- Logout
+- Email verification
+- Secure sessions
+- Password hashing
+- Role-based authorization
+
+The platform should initially be limited to eligible Thapar users.
+
+Use a configurable allowlist of university email domains, with `@thapar.edu` as the initial documented domain.
+
+Do not assume all university roles can be proven solely from an email address.
+
+Faculty and privileged roles must be verified or admin-assigned.
+
+Provide a development-only email verification mechanism for the local demo.
+
+Unverified users must not access private application content.
+
+Prevent duplicate registrations.
+
+Handle invalid credentials and validation errors correctly.
+
+---
+
+# 7. User roles
+
+Implement the roles required by the original SRS:
+
+- Student
+- Faculty/Mentor
+- Moderator
+- Admin
+
+Use the original report to determine exact privileges.
+
+For the Campus Community extension, authorized faculty or admins may publish highlighted campus announcements.
+
+Do not create a complex society-management role system.
+
+Society announcements can initially be ordinary categorized posts from verified users or approved accounts, clearly labeled according to their actual authorization.
+
+Enforce permissions on the backend.
+
+---
+
+# 8. Student and faculty profiles
+
+Every user should have a polished profile.
+
+Student profile fields:
+- Full name
+- Profile picture
+- Academic department
+- Year of study
+- Bio
+- Skills
+- Interests
+- Experience
+- Availability
+- Projects participated in
+- Optional GitHub link
+- Optional LinkedIn link
+
+Faculty profile fields:
+- Full name
+- Department
+- Bio
+- Research interests
+- Projects and opportunities created
+
+Support profile viewing and editing.
+
+Keep original required-field validation.
+
+Ensure students cannot submit an invalid profile that violates the original test cases.
+
+Use attractive skill chips, profile sections, and project cards.
+
+---
+
+# 9. Student dashboard
+
+Create a personalized dashboard containing:
+
+- Welcome header
+- Recommended projects
+- Relevant opportunities
+- Pending applications
+- My teams
+- Recent notifications
+- Recent campus posts
+- Quick actions
+
+Quick actions:
+- Find Projects
+- Find Teammates
+- Create Project
+- View Applications
+- Explore Community
+
+The dashboard must display actual database-backed data.
+
+Do not show invented activity statistics.
+
+---
+
+# 10. Faculty dashboard
+
+Create a dedicated faculty experience.
+
+Include:
+- Projects created
+- Research opportunities
+- Applications received
+- Candidate matching
+- Team management
+- Relevant notifications
+- Create announcement shortcut
+
+Faculty users should be able to manage their own projects and research opportunities.
+
+Keep student and faculty permissions consistent with the original SRS.
+
+---
+
+# 11. Project creation and management
+
+Students and faculty can create projects according to the original requirements.
+
+Project fields should include:
+- Title
+- Description
+- Category
+- Required skills
+- Preferred team size
+- Creator
+- Status
+- Creation date
+
+Support:
+- Create project
+- Edit own project
+- View project
+- Browse projects
+- Search projects
+- Filter projects
+- View applicants
+- Manage team
+
+Require at least one valid required skill.
+
+Do not allow unauthorized users to edit another person's project.
+
+Use polished project cards.
+
+---
+
+# 12. Research opportunities
+
+Faculty can publish research opportunities.
+
+Include:
+- Research title
+- Description
+- Department
+- Required skills
+- Relevant details
+- Faculty creator
+
+Students can discover research opportunities.
+
+Preserve the original faculty-only creation rule.
+
+Reuse the collaboration application workflow where appropriate.
+
+---
+
+# 13. Skill-based matching — signature feature
+
+This is the central technical feature of PeerConnect.
+
+Implement the original deterministic matching formula exactly:
+
+**Match Score = (Number of Matching Required Skills / Total Number of Required Skills) × 100**
+
+Example:
+
+Project: Smart Attendance System
+
+Required skills:
+- Python
+- Machine Learning
+- React
+- SQL
+
+Candidate A:
+Python, Machine Learning, React, SQL
+Result: 100%
+
+Candidate B:
+Python, Machine Learning, SQL
+Result: 75%
+
+Candidate C:
+Python, SQL
+Result: 50%
+
+Display candidates ranked in descending order of match score.
+
+Each candidate card should show:
+- Name
+- Avatar
+- Department
+- Skills
+- Match percentage
+- Matched skills
+- Missing skills
+- View profile action
+
+Use visually impressive match indicators and progress bars.
+
+Normalize skill labels consistently.
+
+Do not allow availability, experience, interests, or arbitrary weights to change the original baseline score.
+
+If a project has no suitable matches, display a proper empty state rather than fabricated recommendations.
+
+Do not replace this logic with AI or machine learning.
+
+Write unit tests for exact expected scores and ranking.
+
+---
+
+# 14. Discover projects and people
+
+Create two discovery experiences.
+
+## Discover Projects
+
+Support:
+- Search
+- Category filters
+- Required skill filters
+- Project details
+- Application action
+
+## Discover People
+
+Support:
+- Search by name
+- Search by skills
+- Department filters where useful
+- Profile previews
+- View profile
+- Message user
+
+Use actual database queries.
+
+Provide good loading, empty, and error states.
+
+---
+
+# 15. Personalized recommendations
+
+Recommend relevant projects based on student skills and interests.
+
+Keep recommendations transparent and deterministic.
+
+Distinguish recommendation relevance from the exact project skill-match percentage.
+
+Do not introduce an unnecessarily complex recommendation engine.
+
+---
+
+# 16. Project applications
+
+Implement the complete application workflow.
+
+Students can:
+- Apply to projects
+- View application status
+- Track pending applications
+
+Project creators can:
+- View applicants
+- Review candidate profiles
+- Accept applications
+- Reject applications
+
+Statuses:
+- Pending
+- Accepted
+- Rejected
+
+Accepted applicants become team members.
+
+Only authorized project creators can accept or reject.
+
+Prevent duplicate applications.
+
+Enforce team capacity consistently and document whether the creator counts toward capacity.
+
+Generate relevant notifications.
+
+Use database transactions where appropriate.
+
+---
+
+# 17. Team management
+
+Provide a clean team-management interface.
+
+Display:
+- Project title
+- Team members
+- Member profiles
+- Skills
+- Application status
+- Available team positions
+
+Allow creators to review and manage applicants.
+
+Preserve original authorization and team-formation behavior.
+
+Do not add a full task-management suite, Kanban board, or milestone tracker for this submission.
+
+Those are future extensions.
+
+---
+
+# 18. Campus Community — approved scope extension
+
+This is the primary addition to the original project.
+
+Create a simple but beautiful campus community feed.
+
+The purpose is to let students and faculty share university-related information and discover collaboration opportunities.
+
+This should feel social and engaging, without becoming a full social-media platform.
+
+## Post types
+
+Support:
+- General campus updates
+- Project collaboration requests
+- Academic questions
+- Society/event announcements
+- Faculty announcements
+
+Users can create text posts.
+
+Support an optional image attachment if it can be implemented securely and reliably.
+
+Do not implement video uploads for this version.
+
+## Feed interface
+
+Create:
+- Post composer
+- Post cards
+- Author avatar and name
+- Timestamp
+- Post category
+- Post content
+- Optional image
+- Comment section
+
+## Interactions
+
+Implement:
+- Create post
+- View posts
+- Like/unlike
+- Comment
+- Delete own posts
+- Edit own posts where practical
+- Report posts
+
+Persist posts, likes, and comments in PostgreSQL.
+
+Use pagination or incremental loading.
+
+Provide filters such as:
+- All Posts
+- Projects
+- Academic
+- Events
+- Announcements
+
+Do not create stories, reels, followers, trending algorithms, or public social-media discovery.
+
+## Society announcements
+
+Allow students to share society-related announcements as categorized community posts.
+
+Only authorized accounts may use an official or verified publisher label.
+
+Avoid impersonating real societies or university departments in demo data.
+
+## Faculty announcements
+
+Authorized faculty can create highlighted academic or project announcements.
+
+Faculty project announcements should optionally link to a real project or research opportunity.
+
+Students should be able to open the linked opportunity and apply through the existing application workflow.
+
+This integration is especially important.
+
+**The Campus Community must complement the collaboration system rather than exist as an unrelated feature.**
+
+---
+
+# 19. Direct messaging
+
+Implement functional one-to-one messaging between verified users.
+
+Support:
+- Start conversation
+- Send message
+- View conversation history
+- Unread indicators
+- Timestamps
+
+Use a clean messaging interface.
+
+Persist all messages in the database.
+
+Only conversation participants may access messages.
+
+Simple polling or refresh-based updates are sufficient for the submission.
+
+Do not add voice calls, video calls, group calls, or complicated real-time infrastructure.
+
+---
+
+# 20. Notifications
+
+Implement a persistent in-app notification system.
+
+Required notifications:
+- New project application
+- Application accepted
+- Application rejected
+- Relevant project activity
+- New direct message
+- Relevant faculty/campus announcements
+
+Create:
+- Notification bell
+- Unread count
+- Notification dropdown
+- Notification page
+- Mark as read
+
+Do not broadcast every ordinary post to every student.
+
+For announcements, implement a sensible audience policy.
+
+The app should not claim to deliver official university emergency alerts.
+
+---
+
+# 21. Basic moderation and administration
+
+Preserve the moderator and admin capabilities required by the original SRS.
+
+At minimum, implement meaningful and demonstrable functionality appropriate to those requirements.
+
+Include:
+- User management
+- Review reported posts
+- Hide or remove inappropriate content
+- Appropriate administrative controls
+- Server-side authorization
+
+Use a simple, clean management interface.
+
+Do not build an elaborate enterprise administration system.
+
+---
+
+# 22. Database design
+
+Create a normalized schema including relevant entities such as:
+
+- User
+- Profile
+- Skill
+- ProfileSkill
+- Project
+- ProjectRequiredSkill
+- ResearchOpportunity
+- Application
+- Team
+- TeamMembership
+- Conversation
+- Message
+- Notification
+- CommunityPost
+- PostLike
+- PostComment
+- PostReport
+- VerificationToken
+
+Add additional entities only where justified by the actual implementation.
+
+Use:
+- Foreign keys
+- Unique constraints
+- Appropriate indexes
+- Proper cascading behavior
+- Database migrations
+
+Keep the schema easy to explain in a viva.
+
+Create an ER diagram and document important relationships.
+
+---
+
+# 23. Seed data and demo accounts
+
+Provide realistic, fictional sample data.
+
+Include:
+- Student accounts
+- Faculty accounts
+- Moderator account
+- Admin account
+- Student profiles with varied skills
+- Multiple projects
+- Research opportunities
+- Applications
+- Team memberships
+- Campus posts
+- Comments
+- Notifications
+- Sample conversations
+
+Include the exact matching test fixture:
+
+Project requires:
+Python, ML, React, SQL
+
+Candidate A: 100%
+Candidate B: 75%
+Candidate C: 50%
+
+Also include an isolated no-match scenario for the original TC-07 test.
+
+Seed data must be reproducible.
+
+Use clearly fictional demo users and announcements.
+
+Document demo credentials securely for local testing.
+
+---
+
+# 24. Original UCS503 test cases
+
+Implement and execute all ten original test cases:
+
+TC-01: Registration and verification
+
+TC-02: Login
+
+TC-03: Manage profile
+
+TC-04: Create project
+
+TC-05: Create research opportunity
+
+TC-06: Skill matching and ranking
+
+TC-07: No suitable matching candidates
+
+TC-08: Project discovery/search
+
+TC-09: Apply to project and notify creator
+
+TC-10: Accept/reject applicants, form teams, and notify students
+
+Match the detailed expected outcomes from the attached test-case document.
+
+Do not simply test the feature names.
+
+Implement the actual test steps and assertions.
+
+---
+
+# 25. Additional tests
+
+Test the Campus Community features:
+
+- Verified users can create posts
+- Unverified users cannot access private posts
+- Posts persist after refresh
+- Likes toggle correctly
+- Comments persist
+- Users cannot edit other users' posts
+- Users cannot delete other users' posts
+- Faculty announcements respect authorization
+- Linked project announcements open the correct project
+- Messaging is private
+- Notifications persist
+- Invalid uploads are rejected
+
+Also test:
+- Duplicate applications
+- Invalid input
+- Unauthorized API access
+- Database integrity
+- Responsive layout
+- Basic accessibility
+
+Report actual executed results.
+
+Never fabricate passing tests.
+
+---
+
+# 26. Required application pages
+
+Build the following screens:
+
+## Public
+- Landing page
+- Register
+- Login
+- Verify email
+
+## Student
+- Dashboard
+- My Profile
+- Edit Profile
+- Discover Projects
+- Project Details
+- Create Project
+- Find Teammates
+- Candidate Matching
+- My Applications
+- My Teams
+- Discover People
+
+## Faculty
+- Faculty Dashboard
+- Create Research Opportunity
+- Manage Projects
+- Review Applicants
+
+## Community
+- Campus Feed
+- Create Post
+- Post Details
+- Messages
+- Notifications
+
+## Administration
+- Moderator Dashboard
+- Admin Dashboard
+
+## General
+- Settings
+- Error states
+- Not Found page
+
+Use shared layouts and components.
+
+Every navigation item must lead to a functional screen.
+
+Do not create placeholder pages.
+
+---
+
+# 27. Performance and security
+
+Implement:
+- Input validation
+- Secure password storage
+- Session protection
+- Role-based access control
+- File upload validation
+- Ownership checks
+- Safe database queries
+- Pagination
+- Useful error handling
+- Loading states
+
+Do not expose private student information unnecessarily.
+
+Do not rely on frontend checks for security.
+
+Keep private campus content inaccessible to unauthenticated users.
+
+---
+
+# 28. Academic documentation
+
+Create:
+
+- `README.md`
+- `docs/ARCHITECTURE.md`
+- `docs/DATABASE_DESIGN.md`
+- `docs/REQUIREMENTS_TRACEABILITY.md`
+- `docs/SCOPE_EXTENSIONS.md`
+- `docs/TEST_REPORT.md`
+- `docs/DEMO_SCRIPT.md`
+- `.env.example`
+
+Explain:
+- Problem statement
+- Project objectives
+- System architecture
+- Database design
+- Original SRS coverage
+- Campus Community extensions
+- Important design decisions
+- Testing results
+- Setup instructions
+- Known limitations
+
+The documentation should support the university presentation and viva.
+
+Do not silently rewrite the original project report.
+
+If diagrams need updating, create clearly labeled revised diagrams.
+
+---
+
+# 29. Suggested presentation flow
+
+Prepare an impressive but reliable 6–8 minute demonstration.
+
+1. Show the landing page.
+2. Log in as a student.
+3. Open the student dashboard.
+4. Edit the student's skills.
+5. Discover projects.
+6. Show matching percentages.
+7. Apply to a project.
+8. Switch to faculty/project creator.
+9. Review and accept the application.
+10. Show the updated team.
+11. Demonstrate notifications.
+12. Open the Campus Community feed.
+13. Create a post and comment on another post.
+14. Open a faculty project announcement.
+15. Follow its link to the relevant project.
+16. Demonstrate direct messaging.
+
+Prioritize a reliable end-to-end flow over showing every screen.
+
+---
+
+# 30. Implementation strategy
+
+Work in stages.
+
+**Phase 1: Analyze**
+- Read both attached documents.
+- Inspect the workspace.
+- Extract requirements.
+- Create the implementation checklist.
+- Identify ambiguities.
+
+**Phase 2: Foundation**
+- Initialize the application.
+- Configure the database.
+- Create the design system.
+- Implement authentication.
+
+**Phase 3: Original Core**
+- Profiles
+- Projects
+- Research opportunities
+- Search
+- Matching
+- Applications
+- Teams
+
+**Phase 4: Communication**
+- Messaging
+- Notifications
+
+**Phase 5: Campus Community**
+- Feed
+- Posts
+- Likes
+- Comments
+- Announcements
+- Project-linked posts
+
+**Phase 6: Administration**
+- Moderation
+- Admin functionality
+
+**Phase 7: Quality**
+- Seed data
+- Automated tests
+- Browser testing
+- UI/UX refinement
+- Documentation
+- Demo preparation
+
+Complete and verify each phase before moving to the next.
+
+Do not build all screens with fake data and leave backend integration until the end.
+
+---
+
+# 31. Strict scope boundaries
+
+This is an academic submission.
+
+**Do not implement the following in this version:**
+
+- Instagram-style stories
+- Reels
+- Video uploads
+- Follower networks
+- Full student marketplace
+- Event RSVP platform
+- Large society-management system
+- Dedicated startup marketplace
+- Live streaming
+- Audio/video calls
+- Payment systems
+- Multi-university onboarding
+- Complex AI recommendation engines
+- Full task-management suite
+- Complex real-time infrastructure
+
+These are reserved for potential future PeerConnect development.
+
+Keep the architecture reasonably extensible without prematurely implementing those features.
+
+---
+
+# 32. Definition of done
+
+The project is complete only when:
+
+- The application runs locally.
+- The database works.
+- Authentication and verification work.
+- Original SRS functionality is implemented.
+- Matching produces correct results.
+- Applications and teams work.
+- Messaging persists.
+- Notifications work.
+- Campus posts persist.
+- Likes and comments work.
+- Faculty announcements integrate with projects.
+- Authorization is enforced.
+- The interface is polished and responsive.
+- Original test cases are executed.
+- Documentation is complete.
+- A reliable demo workflow is available.
+
+Do not claim completion for features that remain broken or unimplemented.
+
+---
+
+# 33. Final UI/UX polish
+
+After implementing the functionality, perform a dedicated visual quality pass.
+
+Inspect:
+- Landing page
+- Student dashboard
+- Faculty dashboard
+- Campus feed
+- Project discovery
+- Skill matching
+- Student profiles
+- Messaging
+- Notifications
+
+Fix:
+- Inconsistent spacing
+- Weak typography
+- Poor color contrast
+- Broken responsive layouts
+- Unattractive empty states
+- Unnecessary visual clutter
+- Inconsistent button styles
+- Missing loading feedback
+
+The application should feel premium and cohesive.
+
+The most important visual screens are:
+1. Landing page
+2. Student dashboard
+3. Project matching
+4. Campus Community feed
+5. Student profile
+
+---
+
+# 34. Final execution directive
+
+Build **PeerConnect** as a complete, functional, well-engineered university project.
+
+The original skill-based collaboration system is the academic foundation.
+
+The Campus Community feed is a focused enhancement that makes the platform more engaging and relevant to everyday university life.
+
+Prioritize:
+
+**Correctness > Working functionality > UI/UX polish > Additional features**
+
+However, do not neglect design. The application must still look exceptional.
+
+You are authorized to inspect files, write code, install dependencies, create migrations, run tests, inspect the running application, and fix bugs within the project workspace.
+
+Do not deploy publicly or use paid services without permission.
+
+Do not stop after planning or scaffolding.
+
+Implement, run, test, debug, and polish the actual application.
+
+At completion, provide:
+- Working setup instructions
+- Implemented feature summary
+- Actual test results
+- Demo credentials
+- Demo walkthrough
+- Known limitations
+
+**Now read both documents thoroughly, create the development plan, and build PeerConnect end-to-end.**
