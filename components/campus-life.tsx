@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -14,6 +14,8 @@ import {
   BookOpen,
   Users,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import {
   campusOrganizations,
@@ -38,6 +40,17 @@ const dayLabel = (date: string) =>
     timeZone: "Asia/Kolkata",
   });
 export function CampusLife({ userId }: { userId: string }) {
+  const societyStrip = useRef<HTMLDivElement>(null);
+  function scrollSocieties(direction: number) {
+    const strip = societyStrip.current;
+    if (strip)
+      strip.scrollBy({
+        left: direction * Math.max(180, strip.clientWidth * 0.75),
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "instant"
+          : "smooth",
+      });
+  }
   const [events, setEvents] = useState(saturnaliaEvents),
     [sources, setSources] = useState<Source[]>([]),
     [day, setDay] = useState("2026-11-21"),
@@ -418,7 +431,36 @@ export function CampusLife({ userId }: { userId: string }) {
             Official society directory ↗
           </a>
         </div>
-        <div className="society-scroll">
+        <div
+          className="society-scroll-controls"
+          aria-label="Society navigation"
+        >
+          <span>Swipe or use the arrows to explore all societies</span>
+          <button
+            type="button"
+            aria-label="Previous societies"
+            aria-controls="campus-society-list"
+            onClick={() => scrollSocieties(-1)}
+          >
+            <ChevronLeft size={18} />
+          </button>
+          <button
+            type="button"
+            aria-label="Next societies"
+            aria-controls="campus-society-list"
+            onClick={() => scrollSocieties(1)}
+          >
+            <ChevronRight size={18} />
+          </button>
+        </div>
+        <div
+          id="campus-society-list"
+          className="society-scroll"
+          ref={societyStrip}
+          role="region"
+          aria-label="Campus societies"
+          tabIndex={0}
+        >
           {campusOrganizations.map((s) => (
             <article key={s.id} className={"society-tile " + s.color}>
               <a href={s.url} target="_blank" rel="noreferrer">
