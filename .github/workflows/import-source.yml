@@ -1,0 +1,40 @@
+name: Import complete PeerConnect source
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - name: Verify and unpack the reviewed source archive
+        shell: python
+        run: |
+          import hashlib, pathlib, zipfile
+          archive = pathlib.Path('peerconnect-source.zip')
+          expected = '870123834b7bd8cc867e07e6f4493e62e943557c31f798337483de11af134331'
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == expected, 'Unexpected source archive'
+          root = pathlib.Path.cwd().resolve()
+          with zipfile.ZipFile(archive) as source:
+              assert len(source.infolist()) >= 152, 'Incomplete source archive'
+              for entry in source.infolist():
+                  path = pathlib.PurePosixPath(entry.filename)
+                  assert not path.is_absolute() and '..' not in path.parts
+                  assert path.parts[0] not in {'.git', '.local-db', 'node_modules', 'runtime'}
+                  assert entry.filename != '.env'
+                  assert not entry.filename.startswith(('handoff/database/', 'handoff/evidence/'))
+                  target = (root / entry.filename).resolve()
+                  assert target.is_relative_to(root)
+              source.extractall(root)
+          print('Reviewed complete source archive unpacked successfully.')
+      - name: Publish the browsable project files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          if ! git diff --cached --quiet; then
+            git commit -m 'Import complete PeerConnect source and documentation'
+            git push origin HEAD:main
+          fi
