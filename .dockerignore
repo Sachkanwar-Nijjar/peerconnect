@@ -1,0 +1,10 @@
+node_modules
+.next*
+.local-db
+.env
+.env.*
+!.env.example
+runtime
+handoff
+test-results
+playwright-report

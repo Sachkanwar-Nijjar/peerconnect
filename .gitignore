@@ -1,0 +1,34 @@
+node_modules/
+.next/
+.next-production/
+.next-qa/
+.pnpm-store/
+.env
+.local-db/
+test-results/
+playwright-report/
+*.tsbuildinfo
+
+runtime/
+.portable-launch.lock
+portable-settings.json
+WEBSITE-LINK.txt
+# Private configuration; share templates only
+.env.*
+!.env.example
+!.env.production.example
+
+# Local database exports and raw audit snapshots
+handoff/database/
+handoff/evidence/
+*.sql.gz
+*.dump
+*.backup
+
+# Generated distributions, caches and local logs
+.next*/
+*.zip
+*.log
+coverage/
+.DS_Store
+Thumbs.db

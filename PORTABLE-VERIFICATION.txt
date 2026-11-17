@@ -1,0 +1,13 @@
+Verified 13 November 2026 on Windows x64.
+Bundled Node runtime used; no npm install, separate Node install, or external database required.
+Fresh database initialization, migration, included data restore and app readiness passed.
+{
+  "health": true,
+  "student_login_and_dashboard": true,
+  "student_admin_denied": true,
+  "faculty_login_and_dashboard": true,
+  "exact_matching": true,
+  "snapshot_tables_match": 17
+}
+12 unit tests passed using runtime/node.exe.
+Browser auto-opening is implemented for installed Chrome with a default-browser fallback; setup smoke runs used --no-browser.

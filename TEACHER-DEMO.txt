@@ -1,0 +1,19 @@
+PEERCONNECT — QUICK TEACHER DEMO
+
+1. Open READ-ME-FIRST.html for a readable introduction.
+2. Open OPEN-WEBSITE.cmd. Wait for READY and Chrome.
+3. Student login: student.a@thapar.edu / CampusDemo!2026
+4. Show Campus Home, news, projects, people and profile.
+5. Log out. Teacher login: faculty@thapar.edu / CampusDemo!2026
+6. Manage Projects > Smart Attendance System > Find Teammates.
+   Explain the 100%, 75% and 50% skill-overlap results.
+7. Show the application/team workflow and private messaging.
+8. Return to this folder. Open components/workspace.tsx for frontend,
+   lib/service.ts for backend rules, lib/matching.ts for the algorithm,
+   and prisma/schema.prisma for the database design.
+9. Open docs/REQUIREMENTS_TRACEABILITY.md and docs/LATEST_STATUS.md.
+10. Double-click RUN-UNIT-TESTS.cmd to show the unit tests running.
+
+Full explanations and code map: TEACHER-GUIDE.md.
+This is an AI-assisted academic implementation using third-party libraries,
+a real PostgreSQL database, and fictional labeled demonstration content.

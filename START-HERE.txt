@@ -1,0 +1,66 @@
+PEERCONNECT — COMPLETE PROJECT AND EASY WINDOWS LAUNCH
+
+THIS ENTIRE FOLDER IS THE PROJECT. Keep its contents together.
+
+OPEN THE WEBSITE
+1. Open this folder in Windows File Explorer.
+2. Double-click OPEN-WEBSITE.cmd.
+3. Wait until its black window says READY. Chrome opens automatically.
+4. Keep the black window open while using the site.
+
+No commands, Node.js installation or separate database installation are needed
+for this Windows x64 ready-to-run bundle. The first opening takes longer while
+the folder prepares its own database. It never resets an existing populated DB.
+If Chrome is unavailable, the default browser opens instead.
+
+STUDENT: student.a@thapar.edu
+TEACHER: faculty@thapar.edu
+PASSWORD FOR BOTH: CampusDemo!2026
+
+If the browser does not open, read WEBSITE-LINK.txt (created by the launcher)
+and paste that address into Chrome. The address may use 3001, 3002, etc. when
+3000 is already occupied. Always use the address printed by THIS launcher.
+
+When finished, select the black PeerConnect window and press Ctrl+C.
+You can reopen the same folder later; saved changes stay in .local-db.
+Do not move this folder while the website is running.
+
+SHOW YOUR TEACHER
+Double-click READ-ME-FIRST.html for the readable project overview.
+Read TEACHER-GUIDE.md for the code map, architecture, workflow and viva points.
+Original PDF/Word requirements: handoff/originals/
+Actual website code: app/, components/, lib/
+Database schema/migrations/fixtures: prisma/
+Automated tests: tests/ and e2e/
+Architecture, ER diagram, reports/screenshots: docs/
+Continuation prompt: 01-MASTER-PROMPT.md
+
+WHAT TO COPY OR GIVE THE TEACHER
+Copy the WHOLE PeerConnect-Complete folder. To transfer one file instead, use
+PeerConnect-Complete-Windows.zip, then right-click it > Extract All before
+running OPEN-WEBSITE.cmd. Do not try to run the app inside the ZIP preview.
+On this laptop the folder is already saved; no extraction is necessary.
+Choose a short local location such as Documents\PeerConnect-Complete.
+
+node_modules contains installed libraries. runtime contains the bundled Node
+program. .next-production is the verified optimized build. These make this
+folder much larger than a source-only handoff. Do not delete them for a demo.
+The launcher uses development mode so new registrations can use the local
+simulated verification link without real email delivery or a paid service.
+
+This is a LOCAL website on this laptop, not a public Internet link. This folder
+is specifically prepared for Windows x64. On another operating system, use the
+source setup in README.md instead of the Windows launcher.
+
+Keep the database snapshot private. It contains application content and local
+demo account password hashes. Active login sessions are not copied.
+
+UPDATED 15 NOVEMBER 2026
+Course Library, Skill Helpers and Guidance Inbox are now in the left navigation.
+Read docs/UPGRADE_2026_11_15.md for features, verification and deployment limits.
+This folder is updated; Desktop copies and older ZIP files are not synchronized.
+
+CAMPUS LIFE RELEASE — 16 NOVEMBER 2026
+Saturnalia schedule, society updates, campus toolkit and all earlier learning features are included.
+Use OPEN-WEBSITE.cmd. The older Desktop copies and ZIPs are separate copies.
+See docs/CAMPUS_LIFE_RELEASE_2026_11_16.md for verification and source freshness limits.

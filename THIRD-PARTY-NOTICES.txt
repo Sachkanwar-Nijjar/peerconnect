@@ -1,0 +1,8 @@
+This academic bundle includes open-source dependencies, not only original project code.
+
+Node.js: runtime/node.exe; copyright/license and bundled notices in runtime/NODE-LICENSE.txt. License text obtained from https://raw.githubusercontent.com/nodejs/node/v24.x/LICENSE.
+Installed libraries and their license/notice files are retained in node_modules. See package.json and package-lock.json for exact versions and transitive dependencies.
+PostgreSQL binaries are provided through @embedded-postgres/windows-x64 and remain subject to their supplied notices.
+Campus photographs: public/images/CREDITS.txt (Ayush.undefined, CC BY-SA 3.0).
+Inter font is bundled through @fontsource/inter with its supplied font license.
+ChatGPT/Codex assisted project development; no claim of independently authoring third-party software is made.
